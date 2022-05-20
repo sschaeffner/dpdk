@@ -71,6 +71,9 @@ ifeq ($(shell test $(GCC_VERSION) -lt 47 && echo 1), 1)
 WERROR_FLAGS += -Wno-uninitialized
 endif
 
+WERROR_FLAGS += -Wno-zero-length-bounds
+WERROR_FLAGS += -Wno-uninitialized
+
 HOST_WERROR_FLAGS := $(WERROR_FLAGS)
 
 ifeq ($(shell test $(HOST_GCC_VERSION) -gt 70 && echo 1), 1)
