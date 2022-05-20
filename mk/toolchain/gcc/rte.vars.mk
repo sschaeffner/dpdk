@@ -73,6 +73,7 @@ endif
 
 WERROR_FLAGS += -Wno-zero-length-bounds
 WERROR_FLAGS += -Wno-uninitialized
+WERROR_FLAGS += -Wno-stringop-overflow
 
 HOST_WERROR_FLAGS := $(WERROR_FLAGS)
 
